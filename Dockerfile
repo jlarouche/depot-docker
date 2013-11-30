@@ -8,14 +8,14 @@ MAINTAINER Jason Kulatunga jason@thesparktree.com
 ENV DOCKER_HOME /var/docker
 
 ## Couchpotato
-ENV COUCHPOTATO_HOME $DOCKER_HOME/couchpotato
+#ENV COUCHPOTATO_HOME $DOCKER_HOME/couchpotato
 ENV COUCHPOTATO_WEBUI_PORT 54321
 ENV COUCHPOTATO_WEBUI_USER couchpotato
 ENV COUCHPOTATO_WEBUI_PASSWORD admin
 EXPOSE 54321
 
 ## Sickbeard
-ENV SICKBEARD_HOME $DOCKER_HOME/sickbeard
+#ENV SICKBEARD_HOME $DOCKER_HOME/sickbeard
 ENV SICKBEARD_WEBUI_PORT 54322
 ENV SICKBEARD_WEBUI_USER sickbeard
 ENV SICKBEARD_WEBUI_PASSWORD admin
@@ -42,34 +42,32 @@ ENV VOLUME_BLACKHOLE_PATH /mnt/blackhole
 VOLUME ["/mnt/completed","/mnt/processing", "/mnt/tvshows","/mnt/movies","/mnt/blackhole"]
 
 # Generate Required Folders
-RUN mkdir -p $DOCKER_HOME
-RUN mkdir -p $COUCHPOTATO_HOME
-RUN mkdir -p $SICKBEARD_HOME
-RUN mkdir -p $DELUGE_HOME
+RUN mkdir -p $DOCKER_HOME && mkdir -p $COUCHPOTATO_HOME && mkdir -p $SICKBEARD_HOME && mkdir -p $DELUGE_HOME
 
 # Copy over the run program
-ADD entrypoint.sh $DELUGE_HOME/entrypoint.sh
+ADD entrypoint.sh $DOCKER_HOME/entrypoint.sh
 ENTRYPOINT /var/docker/entrypoint.sh
 
 # Install Templating Prerequsites
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y
 # Install Python-Cheetah, a prereq for templating
 RUN apt-get -y install python-cheetah
 
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
-RUN file/couchpotato/build.sh
+ADD file/couchpotato/build.sh $DOCKER_HOME/couchpotato_build.sh
+RUN /var/docker/couchpotato_build.sh
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
-RUN file/sickbeard/build.sh
-
+ADD file/sickbeard/build.sh $DOCKER_HOME/sickbeard_build.sh
+RUN /var/docker/sickbeard_build.sh
 
 ########################################################################################################################
 # Install Deluge & Copy Template Files
-RUN file/deluge/build.sh
+ADD file/deluge/build.sh $DOCKER_HOME/deluge_build.sh
+RUN /var/docker/deluge_build.sh
 
 
 
