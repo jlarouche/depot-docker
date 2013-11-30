@@ -1,3 +1,4 @@
+#!/bin/bash
 # Install Deluge & Copy Template Files
 mkdir -p $DELUGE_HOME
 apt-get -y install deluged

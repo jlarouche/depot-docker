@@ -1,3 +1,4 @@
+#!/bin/bash
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
 echo "Download CouchPotato"

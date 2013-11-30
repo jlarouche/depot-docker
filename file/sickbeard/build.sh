@@ -1,3 +1,4 @@
+#!/bin/bash
 # Install Sickbeard & Copy Template Files
 # Download TBP branch for Sickbeard
 mkdir -p $SICKBEARD_HOME
