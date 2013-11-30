@@ -40,13 +40,19 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 # Install Couchpotato & Copy Template Files
 ADD file/couchpotato/build.sh $DOCKER_HOME/couchpotato_build.sh
 RUN /bin/bash $DOCKER_HOME/couchpotato_build.sh
+ADD template/couchpotato/settings.tmpl $COUCHPOTATO_HOME/settings.tmpl
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
 ADD file/sickbeard/build.sh $DOCKER_HOME/sickbeard_build.sh
 RUN /bin/bash $DOCKER_HOME/sickbeard_build.sh
+ADD template/sickbeard/config.tmpl $SICKBEARD_HOME/config.tmpl
 
 ########################################################################################################################
 # Install Deluge & Copy Template Files
 ADD file/deluge/build.sh $DOCKER_HOME/deluge_build.sh
 RUN /bin/bash $DOCKER_HOME/deluge_build.sh
+ADD template/deluge/auth.tmpl $DELUGE_CONFIG_HOME/auth.tmpl
+ADD template/deluge/core.tmpl $DELUGE_CONFIG_HOME/core.tmpl
+ADD template/deluge/web.tmpl $DELUGE_CONFIG_HOME/web.tmpl
+ADD template/deluge/web_plugin.tmpl $DELUGE_CONFIG_HOME/web_plugin.tmpl
