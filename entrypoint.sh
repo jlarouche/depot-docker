@@ -2,13 +2,13 @@
 # Configure and Run Couchpotato
 cheetah f --env --oext conf $COUCHPOTATO_HOME/settings
 # Start the Couchpotato application
-python /var/docker/couchpotato/CouchPotato.py
+#python /var/docker/couchpotato/CouchPotato.py
 
 ########################################################################################################################
 # Configure and Run Sickbeard
 cheetah f --env --oext ini $SICKBEARD_HOME/config
 # Start the Sickbeard application
-python /var/docker/sickbeard/SickBeard.py
+#python /var/docker/sickbeard/SickBeard.py
 
 ########################################################################################################################
 # Configure and Run Deluge
