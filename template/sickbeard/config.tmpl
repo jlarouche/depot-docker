@@ -141,9 +141,9 @@ nzbget_password = tegbzn6789
 nzbget_category = tv
 nzbget_host = ""
 [TORRENT]
-torrent_username = deluge
-torrent_password = deluge
-torrent_host = http://localhost:54323/
+torrent_username = $DELUGE_DAEMON_USER
+torrent_password = $DELUGE_DAEMON_PASSWORD
+torrent_host = http://localhost:$DELUGE_WEBUI_PORT/
 torrent_path = ""
 torrent_ratio = ""
 torrent_paused = 0

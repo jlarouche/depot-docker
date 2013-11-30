@@ -72,18 +72,18 @@ create_subdir = 0
 use_for = both
 
 [deluge]
-username = 
+username = $DELUGE_DAEMON_USER
 delete_failed = True
 completed_directory = 
 manual = 0
 enabled = 0
 label = 
 paused = False
-host = localhost:58846
+host = localhost:$DELUGE_DAEMON_PORT
 delete_files = True
 directory = 
 remove_complete = True
-password = 
+password = $DELUGE_DAEMON_PASSWORD
 
 [nzbget]
 username = nzbget
