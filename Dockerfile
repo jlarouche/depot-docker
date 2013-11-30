@@ -56,14 +56,14 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
 ADD file/couchpotato/build.sh /tmp/couchpotato_build.sh
-RUN /tmp/couchpotato_build.sh
+RUN /bin/bash /tmp/couchpotato_build.sh
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
 ADD file/sickbeard/build.sh /tmp/sickbeard_build.sh
-RUN /tmp/sickbeard_build.sh
+RUN /bin/bash /tmp/sickbeard_build.sh
 
 ########################################################################################################################
 # Install Deluge & Copy Template Files
 ADD file/deluge/build.sh /tmp/deluge_build.sh
-RUN /tmp/deluge_build.sh
+RUN /bin/bash /tmp/deluge_build.sh
