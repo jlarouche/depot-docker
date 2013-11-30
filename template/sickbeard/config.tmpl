@@ -1,0 +1,291 @@
+[General]
+config_version = 3
+log_dir = Logs
+web_port = $SICKBEARD_WEBUI_PORT
+web_host = 0.0.0.0
+web_ipv6 = 0
+web_log = 0
+web_root = ""
+web_username = $SICKBEARD_WEBUI_USER
+web_password = $SICKBEARD_WEBUI_PASSWORD
+localhost_ip = ""
+anon_redirect = http://derefer.me/?
+use_api = 0
+api_key = ""
+enable_https = 0
+https_cert = server.crt
+https_key = server.key
+use_nzbs = 0
+use_torrents = 1
+nzb_method = blackhole
+torrent_method = deluge
+usenet_retention = 500
+search_frequency = 60
+download_propers = 1
+allow_high_priority = 1
+quality_default = 3
+status_default = 5
+flatten_folders_default = 0
+provider_order = iptorrents tvtorrents ezrss kickasstorrents torrentday publichd torrentleech sceneaccess btn hdbits thepiratebay nzbs_org womble_s_index nzbfinder omgwtfnzbs usenet_crawler nzbgeek sick_beard_index
+version_notify = 1
+naming_strip_year = 0
+naming_pattern = %SN - %Sx%0E - %EN
+naming_custom_abd = 0
+naming_abd_pattern = %SN - %A-D - %EN
+naming_multi_ep = 1
+launch_browser = 0
+update_shows_on_start = 1
+sort_article = 0
+use_banner = 0
+use_listview = 0
+metadata_xbmc = 0|0|0|0|0|0
+metadata_xbmc_v12 = 0|0|0|0|0|0
+metadata_mediabrowser = 0|0|0|0|0|0
+metadata_ps3 = 0|0|0|0|0|0
+metadata_wdtv = 0|0|0|0|0|0
+metadata_tivo = 0|0|0|0|0|0
+metadata_synology = 0|0|0|0|0|0
+metadata_mede8er = 0|0|0|0|0|0
+cache_dir = cache
+root_dirs = 0|$VOLUME_TV_SHOW_PATH
+tv_download_dir = $VOLUME_COMPLETED_PATH
+keep_processed_dir = 0
+process_method = symlink
+move_associated_files = 1
+process_automatically = 0
+unpack = 0
+rename_episodes = 1
+create_missing_show_dirs = 0
+add_shows_wo_dir = 0
+extra_scripts = ""
+git_path = ""
+ignore_words = "german,french,core2hd,dutch,swedish,reenc,MrLss"
+[Blackhole]
+nzb_dir = ""
+torrent_dir = ""
+[EZRSS]
+ezrss = 1
+[TVTORRENTS]
+tvtorrents = 0
+tvtorrents_digest = ""
+tvtorrents_hash = ""
+tvtorrents_options = ""
+[BTN]
+btn = 0
+btn_api_key = ""
+btn_options = ""
+[THEPIRATEBAY]
+thepiratebay = 0
+thepiratebay_trusted = 1
+thepiratebay_proxy = 0
+thepiratebay_proxy_url = ""
+thepiratebay_blacklist = ""
+thepiratebay_options = ""
+[TORRENTLEECH]
+torrentleech = 0
+torrentleech_username = ""
+torrentleech_password = ""
+torrentleech_options = ""
+[IPTORRENTS]
+iptorrents = 0
+iptorrents_username = ""
+iptorrents_password = ""
+iptorrents_freeleech = 0
+iptorrents_options = ""
+[KAT]
+kat = 0
+kat_verified = 1
+kat_options = ""
+[PUBLICHD]
+publichd = 0
+publichd_options = ""
+[SCC]
+scc = 0
+scc_username = ""
+scc_password = ""
+scc_options = ""
+[TORRENTDAY]
+torrentday = 0
+torrentday_username = ""
+torrentday_password = ""
+torrentday_freeleech = 0
+torrentday_options = ""
+[HDBITS]
+hdbits = 0
+hdbits_username = ""
+hdbits_passkey = ""
+hdbits_options = ""
+[NZBs]
+nzbs = 0
+nzbs_uid = ""
+nzbs_hash = ""
+[Newzbin]
+newzbin = 0
+newzbin_username = ""
+newzbin_password = ""
+[Womble]
+womble = 0
+[omgwtfnzbs]
+omgwtfnzbs = 0
+omgwtfnzbs_username = ""
+omgwtfnzbs_apikey = ""
+[SABnzbd]
+sab_username = ""
+sab_password = ""
+sab_apikey = ""
+sab_category = tv
+sab_host = http:///
+[NZBget]
+nzbget_username = nzbget
+nzbget_password = tegbzn6789
+nzbget_category = tv
+nzbget_host = ""
+[TORRENT]
+torrent_username = deluge
+torrent_password = deluge
+torrent_host = http://localhost:54323/
+torrent_path = ""
+torrent_ratio = ""
+torrent_paused = 0
+torrent_high_bandwidth = 0
+torrent_label = sickbeard
+[XBMC]
+use_xbmc = 0
+xbmc_notify_onsnatch = 0
+xbmc_notify_ondownload = 0
+xbmc_notify_onsubtitledownload = 0
+xbmc_update_library = 0
+xbmc_update_full = 0
+xbmc_update_onlyfirst = 0
+xbmc_host = ""
+xbmc_username = ""
+xbmc_password = ""
+[Plex]
+use_plex = 1
+plex_notify_onsnatch = 0
+plex_notify_ondownload = 1
+plex_notify_onsubtitledownload = 0
+plex_update_library = 1
+plex_server_host = 127.0.0.1:23703
+plex_host = 127.0.0.1:3000
+plex_username = myusername
+plex_password = mypassword
+[Growl]
+use_growl = 0
+growl_notify_onsnatch = 0
+growl_notify_ondownload = 0
+growl_notify_onsubtitledownload = 0
+growl_host = ""
+growl_password = ""
+[Prowl]
+use_prowl = 0
+prowl_notify_onsnatch = 0
+prowl_notify_ondownload = 0
+prowl_notify_onsubtitledownload = 0
+prowl_api = ""
+prowl_priority = 0
+[Twitter]
+use_twitter = 0
+twitter_notify_onsnatch = 0
+twitter_notify_ondownload = 0
+twitter_notify_onsubtitledownload = 0
+twitter_username = ""
+twitter_password = ""
+twitter_prefix = Sick Beard
+[Boxcar]
+use_boxcar = 0
+boxcar_notify_onsnatch = 0
+boxcar_notify_ondownload = 0
+boxcar_notify_onsubtitledownload = 0
+boxcar_username = ""
+[Pushover]
+use_pushover = 0
+pushover_notify_onsnatch = 0
+pushover_notify_ondownload = 0
+pushover_notify_onsubtitledownload = 0
+pushover_userkey = ""
+[Libnotify]
+use_libnotify = 0
+libnotify_notify_onsnatch = 0
+libnotify_notify_ondownload = 0
+libnotify_notify_onsubtitledownload = 0
+[NMJ]
+use_nmj = 0
+nmj_host = ""
+nmj_database = ""
+nmj_mount = ""
+[NMJv2]
+use_nmjv2 = 0
+nmjv2_host = ""
+nmjv2_database = ""
+nmjv2_dbloc = None
+[Synology]
+use_synoindex = 0
+[SynologyNotifier]
+use_synologynotifier = 0
+synologynotifier_notify_onsnatch = 0
+synologynotifier_notify_ondownload = 0
+synologynotifier_notify_onsubtitledownload = 0
+[Trakt]
+use_trakt = 0
+trakt_username = ""
+trakt_password = ""
+trakt_api = ""
+trakt_remove_watchlist = 0
+trakt_use_watchlist = 0
+trakt_method_add = 0
+trakt_start_paused = 0
+[pyTivo]
+use_pytivo = 0
+pytivo_notify_onsnatch = 0
+pytivo_notify_ondownload = 0
+pytivo_notify_onsubtitledownload = 0
+pyTivo_update_library = 0
+pytivo_host = ""
+pytivo_share_name = ""
+pytivo_tivo_name = ""
+[NMA]
+use_nma = 0
+nma_notify_onsnatch = 0
+nma_notify_ondownload = 0
+nma_notify_onsubtitledownload = 0
+nma_api = ""
+nma_priority = 0
+[Pushalot]
+use_pushalot = 0
+pushalot_notify_onsnatch = 0
+pushalot_notify_ondownload = 0
+pushalot_notify_onsubtitledownload = 0
+pushalot_authorizationtoken = ""
+[Email]
+use_email = 0
+email_notify_onsnatch = 0
+email_notify_ondownload = 0
+email_notify_onsubtitledownload = 0
+email_host = ""
+email_port = 25
+email_tls = 0
+email_user = ""
+email_password = ""
+email_from = ""
+email_list = ""
+[Newznab]
+newznab_data = NZBs.org|http://nzbs.org/||0!!!NZBFinder|http://www.nzbfinder.ws/||0!!!Sick Beard Index|http://lolo.sickbeard.com/||0!!!NZBGeek|https://index.nzbgeek.info/||0!!!Usenet-Crawler|http://www.usenet-crawler.com/||0
+[TorrentRss]
+torrentrss_data = ""
+[GUI]
+gui_name = slick
+home_layout = banner
+display_show_specials = 1
+coming_eps_layout = banner
+coming_eps_display_paused = 0
+coming_eps_sort = date
+coming_eps_missed_range = 7
+[Subtitles]
+use_subtitles = 0
+subtitles_languages = ""
+SUBTITLES_SERVICES_LIST = ""
+SUBTITLES_SERVICES_ENABLED = ""
+subtitles_dir = ""
+subtitles_default = 0
+subtitles_history = 0
