@@ -5,6 +5,7 @@ MAINTAINER Jason Kulatunga jason@thesparktree.com
 
 ########################################################################################################################
 # Global Configuration
+#any changes here should be duplicated in the env.sh. file.
 ENV DOCKER_HOME /var/docker
 
 ## Couchpotato
@@ -45,6 +46,7 @@ VOLUME ["/mnt/completed","/mnt/processing", "/mnt/tvshows","/mnt/movies","/mnt/b
 RUN mkdir -p $DOCKER_HOME
 
 # Copy over the run program
+ADD file/global/env.sh $DOCKER_HOME/env.sh
 ADD entrypoint.sh $DOCKER_HOME/entrypoint.sh
 ENTRYPOINT /var/docker/entrypoint.sh
 
@@ -55,15 +57,15 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
-ADD file/couchpotato/build.sh /tmp/couchpotato_build.sh
-RUN /bin/bash /tmp/couchpotato_build.sh
+ADD file/couchpotato/build.sh $DOCKER_HOME/couchpotato_build.sh
+RUN /bin/bash $DOCKER_HOME/couchpotato_build.sh
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
-ADD file/sickbeard/build.sh /tmp/sickbeard_build.sh
-RUN /bin/bash /tmp/sickbeard_build.sh
+ADD file/sickbeard/build.sh $DOCKER_HOME/sickbeard_build.sh
+RUN /bin/bash $DOCKER_HOME/sickbeard_build.sh
 
 ########################################################################################################################
 # Install Deluge & Copy Template Files
-ADD file/deluge/build.sh /tmp/deluge_build.sh
-RUN /bin/bash /tmp/deluge_build.sh
+ADD file/deluge/build.sh $DOCKER_HOME/deluge_build.sh
+RUN /bin/bash $DOCKER_HOME/deluge_build.sh

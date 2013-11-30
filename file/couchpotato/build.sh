@@ -1,6 +1,7 @@
 #!/bin/bash
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
+source /var/docker/env.sh
 echo "Download CouchPotato"
 mkdir -p $COUCHPOTATO_HOME
 wget --no-check-certificate -O /tmp/couchpotato.tar.gz https://github.com/RuudBurger/CouchPotatoServer/archive/master.tar.gz
