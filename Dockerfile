@@ -56,7 +56,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
 ADD file/couchpotato/build.sh $DOCKER_HOME/couchpotato_build.sh
-RUN /var/docker/couchpotato_build.sh
+RUN /var/docker/doesnt/couchpotato_build.sh
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
@@ -67,8 +67,3 @@ RUN /var/docker/sickbeard_build.sh
 # Install Deluge & Copy Template Files
 ADD file/deluge/build.sh $DOCKER_HOME/deluge_build.sh
 RUN /var/docker/deluge_build.sh
-
-
-
-
-
