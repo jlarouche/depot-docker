@@ -42,17 +42,20 @@ ENV VOLUME_BLACKHOLE_PATH /mnt/blackhole
 VOLUME ["/mnt/completed","/mnt/processing", "/mnt/tvshows","/mnt/movies","/mnt/blackhole"]
 
 # Generate Required Folders
-RUN mkdir -p $DOCKER_HOME && mkdir -p $COUCHPOTATO_HOME && mkdir -p $SICKBEARD_HOME && mkdir -p $DELUGE_HOME
+RUN mkdir -p $DOCKER_HOME &&\
+    mkdir -p $COUCHPOTATO_HOME &&\
+    mkdir -p $SICKBEARD_HOME &&\
+    mkdir -p $DELUGE_HOME
+#RUN
 
 # Copy over the run program
 ADD entrypoint.sh $DOCKER_HOME/entrypoint.sh
 ENTRYPOINT /var/docker/entrypoint.sh
 
-# Install Templating Prerequsites
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update && apt-get upgrade -y
-# Install Python-Cheetah, a prereq for templating
-RUN apt-get -y install python-cheetah
+# Install Templating Prerequsites (Python-Cheetah)
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list &&\
+    apt-get update && apt-get upgrade -y &&\
+    apt-get -y install python-cheetah
 
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
