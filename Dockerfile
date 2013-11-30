@@ -56,7 +56,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
 ADD file/couchpotato/build.sh $DOCKER_HOME/couchpotato_build.sh
-RUN /var/docker/doesnt/couchpotato_build.sh
+RUN sudo /var/docker/couchpotato_build.sh
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
