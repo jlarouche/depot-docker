@@ -41,12 +41,8 @@ ENV VOLUME_MOVIES_PATH /mnt/movies
 ENV VOLUME_BLACKHOLE_PATH /mnt/blackhole
 VOLUME ["/mnt/completed","/mnt/processing", "/mnt/tvshows","/mnt/movies","/mnt/blackhole"]
 
-# Generate Required Folders
-RUN mkdir -p $DOCKER_HOME &&\
-    mkdir -p $COUCHPOTATO_HOME &&\
-    mkdir -p $SICKBEARD_HOME &&\
-    mkdir -p $DELUGE_HOME
-#RUN
+# Generate Required Folder
+RUN mkdir -p $DOCKER_HOME
 
 # Copy over the run program
 ADD entrypoint.sh $DOCKER_HOME/entrypoint.sh

@@ -1,6 +1,7 @@
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
 # Download CouchPotato
+mkdir -p $COUCHPOTATO_HOME
 wget --no-check-certificate -O /tmp/couchpotato.tar.gz https://github.com/RuudBurger/CouchPotatoServer/archive/master.tar.gz
 # Extract to the /tmp folder
 tar -xvf /tmp/couchpotato.tar.gz -C /tmp/

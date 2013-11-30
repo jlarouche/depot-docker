@@ -1,4 +1,5 @@
 # Install Deluge & Copy Template Files
+mkdir -p $DELUGE_HOME
 apt-get -y install deluged
 mv template/deluge/auth.tmpl $DELUGE_CONFIG_HOME/auth.tmpl
 mv template/deluge/core.tmpl $DELUGE_CONFIG_HOME/core.tmpl
