@@ -8,7 +8,7 @@ export COUCHPOTATO_WEBUI_USER=couchpotato
 export COUCHPOTATO_WEBUI_PASSWORD=admin
 
 ## Sickbeard
-#export SICKBEARD_HOME=$DOCKER_HOME/sickbeard
+export SICKBEARD_HOME=$DOCKER_HOME/sickbeard
 export SICKBEARD_WEBUI_PORT=54322
 export SICKBEARD_WEBUI_USER=sickbeard
 export SICKBEARD_WEBUI_PASSWORD=admin
