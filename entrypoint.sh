@@ -1,3 +1,4 @@
+#!/bin/bash
 ########################################################################################################################
 # Configure and Run Couchpotato
 cheetah f --env --oext conf $COUCHPOTATO_HOME/settings
