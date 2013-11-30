@@ -60,35 +60,17 @@ RUN apt-get -y install python-cheetah
 
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
-# Download CouchPotato
-ADD https://github.com/RuudBurger/CouchPotatoServer/archive/master.tar.gz /tmp/couchpotato.tar.gz
-# Extract to the /tmp folder
-RUN tar -xvf /tmp/couchpotato.tar.gz -C /tmp/
-# Create the docker couchpotato folder.
-RUN mkdir -p /var/docker
-# move the content from the Sick-Beard folder to the new docker folder.
-RUN mv /tmp/CouchPotatoServer-* $COUCHPOTATO_HOME
-#copy over the config file.
-ADD template/couchpotato/settings.tmpl $COUCHPOTATO_HOME/settings.tmpl
+RUN file/couchpotato/build.sh
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files
-# Download TBP branch for Sickbeard
-ADD https://github.com/mr-orange/Sick-Beard/archive/ThePirateBay.tar.gz /tmp/sickbeard.tar.gz
-# Extract the TPB branch to the /tmp folder
-RUN tar -xvf /tmp/sickbeard.tar.gz -C /tmp/
-# move the content from the Sick-Beard folder to the new docker folder.
-RUN mv /tmp/Sick-Beard-* $SICKBEARD_HOME
-#copy over the config file.
-ADD template/sickbeard/config.tmpl $SICKBEARD_HOME/config.tmpl
+RUN file/sickbeard/build.sh
+
 
 ########################################################################################################################
 # Install Deluge & Copy Template Files
-RUN apt-get -y install deluged
-ADD template/deluge/auth.tmpl $DELUGE_CONFIG_HOME/auth.tmpl
-ADD template/deluge/core.tmpl $DELUGE_CONFIG_HOME/core.tmpl
-ADD template/deluge/web.tmpl $DELUGE_CONFIG_HOME/web.tmpl
-ADD template/deluge/web_plugin.tmpl $DELUGE_CONFIG_HOME/web_plugin.tmpl
+RUN file/deluge/build.sh
+
 
 
 
