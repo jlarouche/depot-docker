@@ -28,7 +28,7 @@ RUN mkdir -p $DOCKER_HOME
 # Copy over the run program
 ADD file/global/env.sh $DOCKER_HOME/env.sh
 ADD entrypoint.sh $DOCKER_HOME/entrypoint.sh
-ENTRYPOINT /var/docker/entrypoint.sh
+ENTRYPOINT /bin/bash /var/docker/entrypoint.sh
 
 # Install Templating Prerequsites (Wget, Python-Cheetah)
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list &&\
