@@ -34,7 +34,8 @@ ENTRYPOINT /var/docker/entrypoint.sh
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list &&\
     apt-get update && apt-get upgrade -y &&\
     apt-get -y install python-cheetah &&\
-    apt-get -y install wget
+    apt-get -y install wget &&\
+    apt-get -y install curl
 
 ########################################################################################################################
 # Install Couchpotato & Copy Template Files
