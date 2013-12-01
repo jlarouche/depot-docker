@@ -1,4 +1,6 @@
 #!/bin/bash
+source /var/docker/env.sh
+
 ########################################################################################################################
 # Configure and Run Couchpotato
 cheetah f --env --oext conf $COUCHPOTATO_HOME/settings
