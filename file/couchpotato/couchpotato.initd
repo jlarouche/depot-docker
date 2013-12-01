@@ -44,7 +44,7 @@ DESC=CouchPotato
 ## otherwise default couchpotato is used
 
 # Run CP as username
-RUN_AS=${CP_USER-couchpotato}
+RUN_AS=${CP_USER-root}
 
 # Path to app
 # CP_HOME=path_to_app_CouchPotato.py

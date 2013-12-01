@@ -6,15 +6,15 @@ source /var/docker/env.sh
 # Configure and Run Couchpotato
 echo "configuring Couchpotato"
 cheetah f --env --oext conf $COUCHPOTATO_HOME/settings
-# Start the Couchpotato application
-#python /var/docker/couchpotato/CouchPotato.py
+echo "Start the Couchpotato application"
+chmod +x /etc/init.d couchpotato
 service couchpotato start
 
 ########################################################################################################################
 # Configure and Run Sickbeard
 echo "configuring sickbeard"
 cheetah f --env --oext ini $SICKBEARD_HOME/config
-# Start the Sickbeard application
+echo "Start the Sickbeard application"
 #python /var/docker/sickbeard/SickBeard.py
 
 ########################################################################################################################
