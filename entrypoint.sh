@@ -7,7 +7,7 @@ source /var/docker/env.sh
 echo "configuring Couchpotato"
 cheetah f --env --oext conf $COUCHPOTATO_HOME/settings
 echo "Start the Couchpotato application"
-chmod +x /etc/init.d couchpotato
+chmod +x /etc/init.d/couchpotato
 service couchpotato start
 
 ########################################################################################################################

@@ -8,6 +8,6 @@ curl -k -L -o /tmp/couchpotato.tar.gz https://github.com/RuudBurger/CouchPotatoS
 echo "Extract to the /tmp folder"
 tar -xvf /tmp/couchpotato.tar.gz -C /tmp/
 echo "move the content from the Couchpotato folder to the new docker folder."
-mv /tmp/CouchPotatoServer-* $COUCHPOTATO_HOME
+mv /tmp/CouchPotatoServer-*/* $COUCHPOTATO_HOME
 
 
