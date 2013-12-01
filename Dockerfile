@@ -44,6 +44,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt
 ADD file/couchpotato/build.sh $DOCKER_HOME/couchpotato_build.sh
 RUN /bin/bash $DOCKER_HOME/couchpotato_build.sh
 ADD template/couchpotato/settings.tmpl $COUCHPOTATO_HOME/settings.tmpl
+ADD file/couchpotato/couchpotato.initd /etc/init.d/couchpotato
 
 ########################################################################################################################
 # Install Sickbeard & Copy Template Files

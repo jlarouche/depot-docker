@@ -8,6 +8,7 @@ echo "configuring Couchpotato"
 cheetah f --env --oext conf $COUCHPOTATO_HOME/settings
 # Start the Couchpotato application
 #python /var/docker/couchpotato/CouchPotato.py
+service couchpotato start
 
 ########################################################################################################################
 # Configure and Run Sickbeard

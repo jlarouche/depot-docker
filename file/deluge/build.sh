@@ -3,3 +3,4 @@
 source /var/docker/env.sh
 mkdir -p $DELUGE_HOME
 apt-get -y install deluged
+apt-get -y install deluge-web
