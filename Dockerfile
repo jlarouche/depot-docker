@@ -51,6 +51,7 @@ ADD file/couchpotato/couchpotato.initd /etc/init.d/couchpotato
 ADD file/sickbeard/build.sh $DOCKER_HOME/sickbeard_build.sh
 RUN /bin/bash $DOCKER_HOME/sickbeard_build.sh
 ADD template/sickbeard/config.tmpl $SICKBEARD_HOME/config.tmpl
+ADD file/sickbeard/sickbeard.initd /etc/init.d/sickbeard
 
 ########################################################################################################################
 # Install Deluge & Copy Template Files

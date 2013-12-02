@@ -15,7 +15,8 @@ service couchpotato start
 echo "configuring sickbeard"
 cheetah f --env --oext ini $SICKBEARD_HOME/config
 echo "Start the Sickbeard application"
-#python /var/docker/sickbeard/SickBeard.py
+chmod +x /etc/init.d/sickbeard
+service sickbeard start
 
 ########################################################################################################################
 # Configure and Run Deluge
