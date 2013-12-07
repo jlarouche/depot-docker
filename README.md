@@ -16,7 +16,7 @@ docker build -rm -t depot github.com/AnalogJ/depot-docker
 `docker rmi $(docker images | grep -v 'ubuntu\|my-image' | awk {'print $3'})`
 
 # run interactive shell on a docker image
-`docker run -p 127.0.0.1:54322:54322 -i -t sickbeard /bin/bash`
+`docker run -p 54321:54321 -p 54322:54322 -p 54323:54323 -i -t depot`
 
 # Tag a image
-`docker tag 85bd818c5744 sickbeard`
+`docker tag 85bd818c5744 depot`
