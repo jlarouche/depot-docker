@@ -29,6 +29,4 @@ cheetah f --env --oext conf $DELUGE_CONFIG_HOME/auth
 mv $DELUGE_CONFIG_HOME/auth.conf $DELUGE_CONFIG_HOME/auth
 
 # Start the Deluge Daemon
-#deluged -d
-
-/bin/bash
+deluged -d
