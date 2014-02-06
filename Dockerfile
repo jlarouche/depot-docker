@@ -23,7 +23,7 @@ ENV DELUGE_CONFIG_HOME //.config/deluge
 ENV DELUGE_WEBUI_PORT 54323
 EXPOSE 54323
 
-VOLUME ["/mnt/completed","/mnt/processing", "/mnt/tvshows","/mnt/movies","/mnt/blackhole"]
+##VOLUME ["/mnt/completed","/mnt/processing", "/mnt/tvshows","/mnt/movies","/mnt/blackhole"]
 
 # Generate Required Folder
 RUN mkdir -p $DOCKER_HOME
